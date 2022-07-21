@@ -42,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
 for(i=0;i<5;i++){
     console.log("Round "+(i+1));
 
-    let playerSelection = prompt("Enter (rock/paper/scissors)", "rock")
+    //let playerSelection = prompt("Enter (rock/paper/scissors)", "rock")
 playerSelection = playerSelection.toLowerCase()
 const computerSelection = getComputerChoice();
 playRound(playerSelection, computerSelection)

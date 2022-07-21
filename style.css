@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+}
+.cent{
+    margin: 0 auto;
+}
+.header{
+    padding: 3rem;
+    display: flex;
+    background-color: rgb(31, 29, 29);
+    color: white;
+}
+.header h1{
+    font-size: 4rem;
+}
+.ground{
+    background-color: rgb(85, 78, 78);
+    
+}
+.game-status{
+    margin: 0 auto;
+    text-align: center;
+    
+    
+}
+.game-status h2{
+    font-size: 2.5rem;
+    color: white;
+   
+  
+
+}
+.game-status p{
+    color: white;
+    
+    font-size: 1.5rem;
+    
+   
+}
+.display{
+    display: flex;
+    justify-content: center;
+}
+.player , .computer{
+    width: 10rem;
+    height: 10rem;
+
+  border: 2px solid blanchedalmond;
+    margin: 1rem;
+   
+    border-radius: 1rem;
+    color: white;
+   
+    display: flex;
+    justify-content: center;
+    font-size: 8.5rem;
+}
+.display p{
+    display: block;
+    color: white;
+    text-align: center;
+}
