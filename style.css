@@ -54,10 +54,21 @@
    
     display: flex;
     justify-content: center;
-    font-size: 8.5rem;
+    font-size: 7rem;
 }
 .display p{
     display: block;
     color: white;
     text-align: center;
+}
+.buttons{
+    display:flex;
+    justify-content: center;
+
+}
+.buttons button{
+    width: 8rem;
+    height: 8rem;
+    margin: 1rem;
+    font-size: 5rem;
 }

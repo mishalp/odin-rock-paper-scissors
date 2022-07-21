@@ -11,34 +11,38 @@
 
 <body>
 
-    <div class="header">
+       <div class="header">
         <h1 class="cent">ROCK PAPER SCISSORS</h1>
-    </div>
+       </div>
     <div class="ground">
         <div class="game-status">
-            <h2>Choose your option</h2><br>
-            <p>score 5 points to win</p>
+            <h2 id="h2">Choose your option</h2><br>
+            <p id="status">score 5 points to win</p>
         </div>
-        <div class="display">
-            <div>
+    
+             <div class="display">
+                 <div>
                 <div class="player">?</div>
-                <p>YOU</p>
+                <p id="playerScr">YOU : 0</p>
 
-            </div>
-            <div>
+                </div>
+              <div>
                 <div class="computer">?</div>
-                <p>COMPUTER</p>
+                <p id="computerScr">COMPUTER : 0</p>
 
-            </div>
-            <div class="buttons">
-                
-            </div>
+                </div>
+
 
         </div>
 
 
+        <div class="buttons">
+            <button class="btn" id="rock">✊</button>
+            <button class="btn" id="paper">✋</button>
+            <button class="btn" id="scissor">✌</button>
 
-
+        </div>
+</div>
 
 
         <script src="script.js"></script>
