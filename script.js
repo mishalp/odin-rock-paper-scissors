@@ -3,15 +3,12 @@ let playerScore = 0
 let pcScore = 0
 
 function playRound(playerSelection, computerSelection, playertxt) {
-    console.log("you: " + playerSelection + " pc: " + computerSelection[0]);
-
    document.getElementsByClassName('player')[0].innerHTML = playertxt
    document.getElementsByClassName('computer')[0].innerHTML = computerSelection[1]
     // your code here!
     if (playerSelection == computerSelection[0]) {
-        console.log('tie')
         document.getElementById('h2').innerHTML = "tie"
-        document.getElementById('score').innerHTML = "Eaqual"
+        document.getElementById('status').innerHTML = "Nothing beats"
     } else {
         if (playerSelection == "rock") {
             if (computerSelection[0] == "paper") {
@@ -42,7 +39,7 @@ function playRound(playerSelection, computerSelection, playertxt) {
         } else {
             if (playerSelection == "scissor") {
                 if (computerSelection[0] == "paper") {
-                     console.log("you win");
+                 
                     playerScore++
                     document.getElementById('status').innerHTML = "Scissor beats paper"
                     document.getElementById('playerScr').innerHTML = `You : ${playerScore}`
@@ -55,37 +52,40 @@ function playRound(playerSelection, computerSelection, playertxt) {
             }
         }
     }
+ 
 }
 
 
    
-    const buttons = document.querySelectorAll('.btn')
+        const buttons = document.querySelectorAll('.btn')
+
    
-    buttons.forEach(button => button.addEventListener('click', (e)=>{
+        buttons.forEach(button => button.addEventListener('click', (e)=>{
+            
+            const playerSelection = e.path[0].id
+            const computerSelection = getComputerChoice();
+            const playertxt = document.getElementById(playerSelection).textContent
+            playRound(playerSelection, computerSelection, playertxt)
+            if(playerScore == 5 || pcScore == 5){
+                if (playerScore > pcScore) {
+                    alert("you win")
+                    location.reload()
+                    
+                } else{
+                   alert('you loss')
+                   location.reload()
+                  
+                }
         
-        const playerSelection = e.path[0].id
-        const computerSelection = getComputerChoice();
-        const playertxt = document.getElementById(playerSelection).textContent
-        console.log(playertxt);
-        playRound(playerSelection, computerSelection, playertxt)
+                
+            }
+    
+
+
+        }))
         
 
-    }))
 
-
-    const computerSelection = getComputerChoice();
-   
-    console.log("score: you:" + playerScore + ",pc:" + pcScore);
-
-
-
-if (playerScore > pcScore) {
-    console.log("you win");
-} else if (playerScore < pcScore) {
-    console.log("you loss");
-} else {
-    console.log("tie");
-}
 
 
 
